@@ -7,3 +7,8 @@ jobs:
         steps: 
             - name: display text
               run: echo "some text"
+            - name: command in line
+              run: |
+                node -v
+                npm -v 
+            
