@@ -5,10 +5,17 @@ jobs:
     run_first-command:
         runs-on: ubuntu-latest
         steps: 
-            - name: display text
-              run: echo "idi obnovi"
             - name: command in line
-              run: |
-                node -v
-                npm -v 
-            
+              run: node -v
+    run_paralel-command:
+        runs-on: windows-latest
+        steps: 
+            - name: command in line
+              run: node -v
+
+    run_second-command:
+        runs-on: macos-latest
+        needs: run_first-command
+        steps: 
+            - name: command in line
+              run: node -v
