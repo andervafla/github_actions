@@ -6,8 +6,8 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - name: command in line
-              run: |
-                pwd
-                ls
-                ls -a
-   
+              run: ls -a 
+            - uses: actions/checkout@v4
+            - name: new file
+              run: ls -a
+          
