@@ -6,16 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - name: command in line
-              run: node -v
-    run_paralel-command:
-        runs-on: windows-latest
-        steps: 
-            - name: command in line
-              run: node -v
-
-    run_second-command:
-        runs-on: macos-latest
-        needs: run_first-command
-        steps: 
-            - name: command in line
-              run: node -v
+              run: |
+                pwd
+                ls -a
+   
